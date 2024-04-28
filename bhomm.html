@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{
+            border: 4px solid black;
+            border-radius: 10px;
+            width: 300px;
+            height: 250px;
+            margin-left: 100px;
+        }
+        #ip{
+
+            border: 3px solid black;
+            border-radius: 20px;
+            width: 100px;
+            height: 150px;
+            margin-left: 50px;
+        }
+        #h{
+            color: brown;
+            margin-left: 150px;
+        }
+        #brr{
+            border: 2px solid black;
+        }
+        #di{
+            float: right;
+            
+            margin-top:-500px 0px 0px 0px;
+        }
+        #ssp{
+            float: right;
+            margin-right: 300px;
+            position:static;
+            margin-top: -350px;
+        }
+        #divv{
+            border: 3px solid black;
+           border-radius: 20px 0px 20px 0px;
+           margin: 50px;
+           height: 520px;
+           width: 600px;
+           background-color: azure;
+           text-align: center;
+         
+        }
+        #btt{
+            text-align: center;
+            color: red;
+            font-size: 20px;
+            border: 4px solid black;
+            border-radius: 15px;
+            background-color: beige;
+            
+        }
+      
+    </style>
+</head>
+<body>
+    
+   <h1 id="h">SHOPING CART</h1>
+
+    <script>
+
+var spn1=document.createElement("span");
+document.body.appendChild(spn1);
+var d=document.createElement("h2");
+spn1.appendChild(d);
+d.setAttribute("id","one");
+var im1=document.createElement("img");
+im1.setAttribute("src",window.localStorage.getItem("image"));
+d.appendChild(im1);
+im1.style.width="290px";
+im1.style.height="240px";
+// FOR IMAGE1
+
+var imgg=document.createElement("img");
+document.body.appendChild(imgg);
+imgg.setAttribute("src","https://m.media-amazon.com/images/I/41037bXz-GL._SY445_SX342_QL70_FMwebp_.jpg");
+imgg.setAttribute("id","ip");
+imgg.addEventListener("click",cb1)
+
+// FOR IMAGE2
+
+var imgg1=document.createElement("img");
+document.body.appendChild(imgg1);
+imgg1.setAttribute("src","https://m.media-amazon.com/images/I/51W0YDiJobL._SX569_.jpg");
+imgg1.setAttribute("id","ip");
+imgg1.addEventListener("click",cb2);
+
+//FOR IMAGE3
+
+var imgg2=document.createElement("img");
+document.body.appendChild(imgg2);
+imgg2.setAttribute("src","https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1694713068/Croma%20Assets/Communication/Wearable%20Devices/Images/300966_0_gwljol.png?tr=w-640");
+imgg2.setAttribute("id","ip");
+imgg2.addEventListener("click",cb3);
+
+function cb1(){
+
+
+    d.innerHTML="<img src='https://m.media-amazon.com/images/I/41037bXz-GL._SY445_SX342_QL70_FMwebp_.jpg' height='240px' width='290px'>"
+
+
+}
+
+function cb2(){
+
+
+    d.innerHTML="<img src='https://m.media-amazon.com/images/I/51W0YDiJobL._SX569_.jpg' height='240px' width='290px'>"
+}
+
+function cb3(){
+
+
+   d.innerHTML="<img src='https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1694713068/Croma%20Assets/Communication/Wearable%20Devices/Images/300966_0_gwljol.png?tr=w-640' height='240px' width='290px'>"
+
+}
+
+var spn2=document.createElement("span");
+spn2.setAttribute("id","ssp");
+document.body.appendChild(spn2);
+var divv=document.createElement("div");
+spn2.appendChild(divv);
+divv.setAttribute("id","divv");
+
+var hh=document.createElement("h1");
+divv.appendChild(hh);
+hh.innerText="ID:"+window.localStorage.getItem("id");
+hh.style.color="red"
+var br1=document.createElement("br");
+document.body.appendChild(br1);
+var br2=document.createElement("br");
+document.body.appendChild(br2);
+
+var hh1=document.createElement("h1");
+divv.appendChild(hh1);
+hh1.innerText="Title:"+window.localStorage.getItem("title");
+hh1.style.color="blue";
+var br3=document.createElement("br");
+document.body.appendChild(br3);
+var br4=document.createElement("br");
+document.body.appendChild(br4);
+
+var hh2=document.createElement("h1");
+divv.appendChild(hh2);
+hh2.style.color="maroon"
+hh2.innerText="Price:"+window.localStorage.getItem("price");
+var br5=document.createElement("br");
+document.body.appendChild(br5);
+var br6=document.createElement("br");
+document.body.appendChild(br6);
+
+var hh3=document.createElement("h1");
+divv.appendChild(hh3);
+hh3.style.color="green"
+hh3.innerText="Category:"+window.localStorage.getItem("category");
+var br7=document.createElement("br");
+document.body.appendChild(br7);
+var br8=document.createElement("br");
+document.body.appendChild(br8);
+var hh4=document.createElement("h1");
+hh4.style.color="orange";
+divv.appendChild(hh4);
+hh4.innerText="Description:"+window.localStorage.getItem("description");
+var br9=document.createElement("br");
+document.body.appendChild(br9);
+var br10=document.createElement("br");
+document.body.appendChild(br10);
+var btn1=document.createElement("button");
+divv.appendChild(btn1);
+btn1.innerText="ADD TO CART";
+btn1.setAttribute("id","btt");
+
+ var div1=document.createElement("div");
+document.body.appendChild(div1);
+ var sh=document.createElement("h1");
+ div1.appendChild(sh);
+ sh.innerText="PRODUCT REVIEWS :*******";
+
+
+ var iimg1=document.createElement("img");
+ iimg1.setAttribute("src","./rating.png");
+ div1.appendChild(iimg1);
+ iimg1.style.width="200px";
+
+ var h4=document.createElement("h3");
+ h4.innerText="Chaitanya";
+ h4.style.color="red";
+ div1.appendChild(h4);
+
+ var par=document.createElement("p");
+ div1.appendChild(par);
+ par.innerText="Good quality product";
+
+ var h5=document.createElement("h3");
+ h5.innerText="Suneel Kumar";
+ h5.style.color="red";
+ div1.appendChild(h5);
+
+ var par1=document.createElement("p");
+ div1.appendChild(par1);
+ par1.innerText="Color is suitable for both summers and winters. Fabric is lightweight and airy- polyester. Versatile can be be styled multiple ways.";
+
+
+    </script>
+
+
+
+</body>
+</html>

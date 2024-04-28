@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.tab{
+    border: 4px solid black;
+    border-radius: 20px;
+    height: 350px;
+    width: 350px;
+    background-color:lightyellow;
+    margin-left: 500px;
+    margin-top: 200px;
+}
+.tab:hover{
+
+background-color:lightcyan;
+
+}
+.trr{
+    display: flex;
+    flex-direction: column;
+}
+.one{
+    text-align: center;
+    font-size: 25px;
+    color: red;
+    padding: 5px;
+}
+.two{
+    text-align: center;
+    font-size: 25px;
+    color:darkblue;
+    padding: 5px;
+}
+.three{
+    text-align: center;
+    font-size: 25px;
+    color:darkslategray;
+    padding: 5px;
+}
+.four{
+
+    text-align: center;
+    font-size: 25px;
+    color:darkred;
+    padding: 5px;
+}
+.five{
+
+    text-align: center;
+    color:darkred;
+    padding: 5px;
+}
+.six{
+    border: 3px solid red;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color:lightcyan;
+}
+.six:hover{
+
+    background-color:honeydew;
+
+}
+  </style>
+</head>
+<body>
+  <script>
+
+
+  var d=document.createElement("table");
+  d.setAttribute("class","tab");
+var tr=document.createElement("tr");
+tr.setAttribute("class","trr");
+var td1=document.createElement("td");
+td1.innerText=window.localStorage.getItem("id");
+td1.setAttribute("class","one");
+var td2=document.createElement("td");
+td2.setAttribute("class","two");
+td2.innerText=window.localStorage.getItem("category");
+var td3=document.createElement("td");
+td3.setAttribute("class","three");
+td3.innerText=window.localStorage.getItem("price");
+var td4=document.createElement("td");
+td4.setAttribute("class","four");
+td4.innerText=window.localStorage.getItem("title");
+var td5=document.createElement("td");
+td5.setAttribute("class","five");
+var imgg=document.createElement("img");
+imgg.setAttribute("src",window.localStorage.getItem("image"));
+td5.appendChild(imgg)
+imgg.style.width="100px";
+
+
+var td6=document.createElement("td");
+td6.setAttribute("class","two");
+var btn=document.createElement("button");
+btn.innerText="BUY NOW";
+btn.setAttribute("class","six");
+btn.addEventListener("click",()=>{
+
+
+    window.location.assign("./bhomm.html");
+
+})
+td6.appendChild(btn)
+
+document.body.appendChild(d);
+d.appendChild(tr);
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);
+tr.appendChild(td6);
+console.log(d);
+
+ </script>
+</body>
+</html>
